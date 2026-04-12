@@ -1,97 +1,135 @@
-/* --- 1. CONFIGURACIÓN GENERAL --- */
-* { 
-    box-sizing: border-box; 
-}
-
-body {
-    background-color: #e2d1b3; /* Color arena */
-    font-family: 'Lora', serif;
-    margin: 0;
-    padding: 0;
-    color: #222;
-    line-height: 1.6;
-}
-
-/* --- 2. CABECERA (Con ilustración) --- */
+/* Configuramos el contenedor principal */
+/* Este es el contenedor principal que envuelve todo (foto, menú, título) */
 header {
-    width: 100%;
-    background-image: url('logo.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 5px solid #b8860b;
+    /* 1. Definimos la posición relativa para que la foto absoluta se base en este contenedor */
+    position: relative; 
+    
+    /* 2. Centramos el contenido de texto (menú y título) */
+    text-align: center; 
+    
+    /* 3. El Borde Dorado solicitado */
+    border: 5px solid gold; /* '5px' es el grosor, 'solid' es línea continua, 'gold' es el color */
+    
+    /* 4. Separación interna para que el borde no toque el contenido (opcional pero recomendado) */
+    padding: 20px; 
+    
+    /* 5. Separación externa para despegar el borde del navegador (opcional) */
+    margin: 10px; 
+    
+    /* 6. Hacemos que la foto tenga espacio arriba (si la foto es muy alta) */
+    padding-top: 30px; 
+    
+    background-color: #f9f9f9; /* Un blanco roto o gris casi invisible */
 }
 
-header h1 {
-    color: #ffffff;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    text-transform: uppercase;
-    margin: 20px 0 0 0;
-    letter-spacing: 2px;
+
+/* --- Mantenemos los estilos anteriores de los elementos individuales --- */
+
+/* La foto sigue en su esquina superior izquierda */
+.foto-esquina {
+    position: absolute;
+    top: 10px;  /* Distancia desde el borde superior dorado */
+    left: 10px; /* Distancia desde el borde izquierdo dorado */
+    width: 80px; 
+    height: auto;
 }
 
-/* --- 3. MENÚ DE NAVEGACIÓN --- */
-nav {
-    margin-bottom: 20px;
-    width: 100%;
+/* El menú de navegación (arriba y centrado) */
+.menu-superior {
+    margin-bottom: 20px; /* Separa el menú del título */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: right;
-    size: 8px;
-}
-
-nav a {
-    color: white;
+.menu-superior a {
     text-decoration: none;
+    color: blue;
+    margin: 0 15px; /* Espacio entre enlaces */
     font-weight: bold;
-    font-size: 0.8rem; /* Tamaño reducido para que no baile */
-    text-transform: uppercase;
-    padding: 6px 12px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-    transition: 0.3s;
-    white-space: nowrap; /* Evita deformaciones */
+    font-size: 18px;
+    display: inline-block;
 }
 
-nav a:hover {
-    background: #b8860b;
+/* El título principal (debajo del menú, centrado) */
+h1 {
+    font-size: 24px;
+    margin: 0;
+    color: black;
 }
 
-/* --- 4. CONTENIDO Y RECORTE DE FOTO --- */
-main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* El menú de navegación (arriba) */
+.menu-superior {
+    margin-bottom: 20px; /* Separa el menú del título de abajo */
+}
+
+.menu-superior a {
+    text-decoration: none;
+    color: blue;
+    margin: 0 15px; /* Espacio entre los enlaces */
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* El título principal (debajo del menú) */
+h1 {
+    font-size: 24px;
+    margin: 0;
+    color: black;
+}
+
+.foto-central {
+    /* He bajado de 200px a 100px para que sea mucho más pequeña */
+    width: 200px; 
+    
+    height: auto;
+    border-radius: 15px; /* Ajustamos un poco el redondeado */
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+/* El contenedor para que siga estando en el centro */
+.contenedor-foto {
     text-align: center;
+    margin-top: 20px;
 }
 
-.foto-perfil {
-    width: 250px;           /* Tamaño del recuadro del recorte */
-    height: 250px;
-    object-fit: cover;      /* RECORTA LA IMAGEN AUTOMÁTICAMENTE */
-    object-position: center top; /* Centra la cara */
-    border: 5px solid white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    border-radius: 15px;
-    margin-bottom: 20px;
+p {
+    /* 1. Cambiamos la fuente a una más moderna y legible */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* 2. Aumentamos el tamaño y el espacio entre líneas */
+    font-size: 18px;
+    line-height: 1.6; /* Esto da aire entre las frases */
+    
+    /* 3. Limitamos el ancho para que el ojo no se canse */
+    max-width: 800px;
+    margin: 30px auto; /* Centra el bloque de texto */
+    
+    /* 4. Justificamos el texto para que quede recto por los lados */
+    text-align: justify;
+    
+    /* 5. Un poco de color gris oscuro para que no sea tan agresivo como el negro puro */
+    color: #333;
+    
+    padding: 0 20px; /* Evita que el texto toque los bordes en el móvil */
 }
 
-.bienvenida h2 {
-    color: #003366;
+footer {
+    display: flex;            /* Usamos flexbox para centrar mejor */
+    justify-content: center;  /* Centra horizontalmente */
+    width: 100%;              /* Que ocupe todo el ancho */
+    margin-top: 40px;         /* Espacio con el texto naranja */
+    padding-bottom: 20px;
+    border-color: yellow;
 }
 
-/* MÓVIL */
-@media (max-width: 600px) {
-    header { padding: 40px 10px; }
-    .foto-perfil { width: 200px; height: 200px; }
+.pie-pagina {
+    font-weight: bold;        /* Pone el texto en NEGRITA */
+    text-align: center;       /* Doble seguridad para centrar */
+    color: #000000;           /* Negro puro para que se lea bien sobre el naranja */
+    font-size: 18px;          /* Un pelín más grande */
+    
+}
+
+body{
+    background-color: burlywood;
 }
