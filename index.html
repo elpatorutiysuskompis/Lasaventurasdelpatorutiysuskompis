@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pato Ruti - Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. CONFIGURACIÓN GENERAL */
+        * { box-sizing: border-box; }
+        
+        body {
+            background-color: #e2d1b3; /* Tu color arena */
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* 2. CABECERA (Azul y Dorado) */
+   
+     header {
+    width: 100%;
+    /* Quitamos el degradado azul y dejamos solo la imagen */
+    background-image: url('logo.jpg'); 
+    
+    background-size: cover;       /* Cubre todo el espacio */
+    background-position: center;  /* Centra el dibujo */
+    background-repeat: no-repeat;
+    
+    padding: 100px 20px;          /* Más espacio para que se vea bien el paisaje */
+    text-align: center;
+    border-bottom: 5px solid #b8860b;
+}
+
+/* IMPORTANTE: Si las letras blancas no se ven bien sobre el dibujo, 
+añadiremos esta sombra al texto para que resalte */
+header h1 {
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Sombra negra para leer mejor */
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    margin-bottom: 20px;
+}
+
+        header h1 {
+            color: #ffffff;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+            letter-spacing: 2px;
+        }
+
+        /* 3. MENÚ DE NAVEGACIÓN */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #b8860b;
+            color: white;
+        }
+
+        /* 4. CONTENIDO PRINCIPAL */
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        /* EL RECORTE DE LA FOTO (Lo que me pediste) */
+        .foto-perfil {
+            width: 250px;           /* Tamaño del recuadro */
+            height: 250px;          /* Igual que el ancho para que sea cuadrado */
+            object-fit: cover;      /* ESTO HACE EL RECORTE AUTOMÁTICO */
+            object-position: center top; /* Centra la cara arriba */
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 15px;    /* Esquinas un poco redondeadas */
+            margin-bottom: 20px;
+        }
+
+        .bienvenida h2 {
+            color: #003366;
+            margin-top: 0;
+        }
+
+        /* 5. ADAPTACIÓN PARA MÓVIL */
+        @media (max-width: 600px) {
+            header { padding: 25px 10px; }
+            .foto-perfil { width: 200px; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Ruti.html">Ruti</a></li>
+            <li><a href="poemario.html">Poemario</a></li>
+            <li><a href="libros.html">Libros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <h1>LAS AVENTURAS DEL PATO RUTI <br> Y SUS KOMPIS</h1>
+</header>
+
+    <main>
+        <img src="PRUEBA PAGINA WEB 2.jpg" alt="El Pato Ruti" class="foto-perfil">
+
+        <P>Julio Nieto Molina, nacido en Cartagena en Julio de 1970, con aire granadino, y un toque abaranero, aunque se declara aborigen de Mar de Cristal. Su primer poemario en vez la luz fue Agua Flamenca, autoeditado en Cartagena. Su segundo poemario es Soledad, locura y libertad (2022) editado por Aliar Ediciones. También ha autoeditado junto a un grupo de amigos un poemario titulado Quietud azul.
+Desde que aprendió a escribir ha tonteado con la escritura hasta realizar sus primeros relatillos y poemarios, todos ellos guardados en el baúl de su casa. Ha publicado además varios tebeos basados en relatos y relatillos gráficos, titulados Pato Ruti y sus Kompis, con unos personajes creados por el mismo... 
+RUTI nació dibujando narices, en una habitación mágica, el comedor de la casa de mis papis.
+Nació entre apuntes de Farmacognosia pues es un dibujo del nuevo siglo XXI, nació no me acuerdo muy bien pero por allá en los albores de finales del 2001 o principios del 2002.
+El primero fue RUTI, luego fueron llegando el resto, DURRI, el gato DÚ,..pasando por GORRI, en el 2020 y por ahora el último es HELL en el 2022.
+RUTI Y SUS KOMPIS, nacieron como una necesidad de expresar mi mundo interior y no es solo un dibujo o un mensaje es ponerle una nota de humor a este mundo, a este mundo que a veces es una mierda y otras veces una maravilla y como dice RUTI esta vida es una mierda maravillosa.
+
+</P>
+
+        
+    </main>
+
+</body>
+</html>
