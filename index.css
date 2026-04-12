@@ -1,0 +1,97 @@
+/* --- 1. CONFIGURACIÓN GENERAL --- */
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #e2d1b3; /* Color arena */
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* --- 2. CABECERA (Con ilustración) --- */
+header {
+    width: 100%;
+    background-image: url('logo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #b8860b;
+}
+
+header h1 {
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+    letter-spacing: 2px;
+}
+
+/* --- 3. MENÚ DE NAVEGACIÓN --- */
+nav {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: right;
+    size: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem; /* Tamaño reducido para que no baile */
+    text-transform: uppercase;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    transition: 0.3s;
+    white-space: nowrap; /* Evita deformaciones */
+}
+
+nav a:hover {
+    background: #b8860b;
+}
+
+/* --- 4. CONTENIDO Y RECORTE DE FOTO --- */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 250px;           /* Tamaño del recuadro del recorte */
+    height: 250px;
+    object-fit: cover;      /* RECORTA LA IMAGEN AUTOMÁTICAMENTE */
+    object-position: center top; /* Centra la cara */
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.bienvenida h2 {
+    color: #003366;
+}
+
+/* MÓVIL */
+@media (max-width: 600px) {
+    header { padding: 40px 10px; }
+    .foto-perfil { width: 200px; height: 200px; }
+}
